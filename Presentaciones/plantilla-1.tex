@@ -1,0 +1,54 @@
+\documentclass{beamer}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usetheme{Warsaw}
+\title{Titulo}
+\subtitle{subtitulo}
+\author{Autor}
+\date{\today}
+
+\begin{document}
+	\begin{frame}
+	    %portada
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\frametitle{índice}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introducción}
+	
+	\begin{frame}
+	 \frametitle{Listas}
+	 \begin{itemize}
+	  \item primer \pause
+	  \item segundo \pause
+	  \item tercero \pause
+	 \end{itemize}
+	\end{frame}
+	
+	\section{Desarrollo}
+	
+	\begin{frame}
+	\frametitle{Lista enumerada}
+		\begin{enumerate}[<+->]
+			\item primer
+			\item segundo
+			\item tercero
+		\end{enumerate}
+	\end{frame}
+	
+	\section{Conclusión}
+	\begin{frame}
+		\begin{block}{Titulo del Bloque}
+			texto del bloque		
+		\end{block}
+	\end{frame}
+\end{document}
