@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \titulo{titulo}{subtitulo}{nombre}{email}{fecha}
+% Resultado:
+% Titulo y subtitulo centrado, nombre al costado inferior izquierdo,
+% Sirve para un solo nombre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[5]{
+\begin{center}
+\Huge{\textsc{#1}}\\
+\large{#2}\\ 
+\end{center}
+\vfill
+\hfill
+\begin{flushright}
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+			Nombre: #3\\
+			Email:\texttt{#4}\\
+			Fecha: #5\\
+			\vspace{1cm}
+\end{flushleft}
+\end{minipage}
+\end{flushright}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \Titulo{titulo}{subtitulo}{nombre}{email}{fecha}
+% Resultado:
+% Titulo , subtitulo,nombre y fecha centrado
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Titulo}[5]{
+	\begin{center}
+		\Huge{ #1 \\ {\large #2}\\[.6cm]}% Titulo
+	 	{\large #3\\
+		\texttt { #4 }\\[.3cm]
+		 #5\\}
+	\end{center}
+	}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \encabezado{archivo}{scale}{texto1}{texto2}{texto3}
+% Resultado:
+% encabezado con imagen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\encabezado}[5]{
+\begin{flushleft}
+\begin{figure}[t]%
+\includegraphics[scale=#2]{#1}%
+\hspace{0.2cm}
+\begin{tabular}{l}
+\textsc{#3}\\
+\textsc{#4}\\
+\textsc{#5}\\ 
+\vspace{.5cm}
+\end{tabular}
+\end{figure}
+\end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \encabezado2{archivo}{scale}{texto1}{texto2}{texto3}{texto4}
+% Resultado:
+% encabezado con imagen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Encabezado}[6]{
+\begin{flushleft}
+\begin{figure}[t]%
+\includegraphics[scale=#2]{#1}%
+\hspace{0.2cm}
+\begin{tabular}{l}
+{\textsc \small #3 }\\
+{\textsc \small #4 }\\
+{\textsc \small #5 }\\ 
+{\textsc \small #6 }\\ 
+\vspace{1cm}
+\end{tabular}
+\end{figure}
+\end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \figura{nombre-fichero}{argumentos}{titulo}{etiqueta}
+% Resultado:
+% Inserta una figura. "La figura~\ref{etiqueta} muestra..." permite
+% referenciar la figura desde el texto.
+% argumentos: width=Xcm,height=Ycm,angle=Z
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\figura}[4]{
+\begin{figure}[h]
+\begin{center}
+\includegraphics[#2]{#1}
+\caption{#3}
+\label{#4}
+\end{center}
+\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \subfigura{nombre-fichero}{nombre-fichero}{argumentos-1}{argumentos-2}{titulo-1}{titulo-2}{titulo}{etiqueta}
+% Resultado:
+% Inserta una figura. "La figura~\ref{etiqueta} muestra..." permite
+% referenciar la figura desde el texto.
+% argumentos: width=Xcm,height=Ycm,angle=Z,scale=0.2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\subfigura}[8]{
+\begin{figure}
+        \begin{subfigure}[h!]{0.5\textwidth}
+                \centering
+                \includegraphics[#3]{#1}
+                \caption{#5}
+        \end{subfigure}
+        \begin{subfigure}[h!]{0.5\textwidth}
+                \centering
+                \includegraphics[#4]{#2}
+                \caption{#6}
+        \end{subfigure}
+        \caption{#7}\label{#8}
+\end{figure}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \figuraentexto{nombre-fichero}{titulo}
+% Resultado:
+% Inserta una figura. "La figura~\ref{etiqueta} muestra..." permite
+% referenciar la figura desde el texto.
+% argumentos: r=right, l=left
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\figuraentexto}[2]{
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{#1}
+  \end{center}
+  \vspace{-20pt}
+  \caption{#2}
+  \vspace{-10pt}
+\end{wrapfigure}}

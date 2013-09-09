@@ -1,0 +1,43 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\begin{document}
+%%%%%%%%%%%%%% TITULO %%%%%%%%%%%%%%%%%%%
+\begin{center}
+\Huge{Minitarea N\textordmasculine 3 Arquitectura de Computadores\\}
+\vspace*{1cm}
+\large{Profesor: Pablo Guerrero\\}
+\large{Integrantes: Eduardo Acha\\}
+\large{\today}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{P1}
+\par \textbf{Explicación:} las operaciones se calculan en paralelo juntando sus resultados en un MUX que a través de los selectores se elige que operación entregar, para que el circuito se síncrono con un reloj en la salida del MUX la conectamos con un Flip-Flop Data de forma que la salida solo cambiara en los pulsos de bajada gracias a que el registro esta conectado con el reloj.
+\\
+\begin{figure}[h]
+\includegraphics[scale=.6]{circuito1.png}
+\centering
+\caption{Circuito Calc}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=.4]{circuito2.png}
+\centering
+\caption{Sub-circuito Calc}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=.4]{tabla2.png}
+\caption{Tabla Loggin}
+\end{figure}
+
+
+
+
+
+\end{document}
