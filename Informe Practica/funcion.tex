@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \encabezado{logo}{factor de escalado}{universidad}{facultad}{departamento}{curso}
+% Resultado:
+% Encabezado con imagenes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\encabezado}[6]{
+\begin{flushleft}
+\begin{figure}[t]%
+\includegraphics[scale=#2]{#1}%
+\hspace{0.2cm}
+\begin{tabular}{l}
+\textsc{#3}\\
+\textsc{#4}\\
+\textsc{#5}\\ 
+\textsc{#6}\\
+\vspace{.5cm}
+\end{tabular}
+\end{figure}
+\end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \titulo{titulo}{Codigo}{Empresa}
+% Resultado:
+% Titulo y subtitulo centrado, nombre al costado inferior izquierdo,
+% Sirve para un solo nombre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[3]{
+	\begin{center}
+ 		\Huge{\textsc{#1}}\\
+ 		\vspace{3mm}
+ 		\Large{#2}\\
+ 		\vspace{3mm}
+ 		\large{\textsc{#3}}\\	
+	\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando:
+% \datos{Nombre}{Carrera}{Especialidad}{rut}{email}{telefono}{fecha}
+% Resultado:
+% Titulo y subtitulo centrado, nombre al costado inferior izquierdo,
+% Sirve para un solo nombre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\datos}[7]{
+	\begin{flushright}
+	\begin{minipage}{0.45\textwidth}
+	\begin{flushleft}
+			Nombre: #1\\
+			Carrera: #2\\
+			Especialidad: #3\\
+			Rut: \texttt{#4}\\
+			Email: \texttt{#5}\\
+			Telefono: \texttt{#6}\\
+			Fecha: #7\\
+			\vspace{1cm}
+	\end{flushleft}
+	\end{minipage}
+	\end{flushright}
+}
+
